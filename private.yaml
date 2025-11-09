@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-micro-a-to-micro-shadcn-clone-ingress
+  name: allow-micro-a-to-micro-shadcn-helm-ingress
   namespace: pluaj-dev-dev
 spec:
   podSelector:
@@ -13,7 +13,7 @@ spec:
     - from:
         - podSelector:
             matchLabels:
-              app: mi-app-dt  # Permite solo el tráfico proveniente de micro-a
+              app: mi-app-dt-helm  # Permite solo el tráfico proveniente de micro-a
       ports:
         - protocol: TCP
           port: 8082  # Puerto de destino en micro-b (ajústalo según tu app)

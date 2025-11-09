@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-ingress-to-micro-shadcn-frontend
+  name: allow-ingress-to-micro-shadcn-frontend-helm
   namespace: pluaj-dev-dev
 spec:
   podSelector:
     matchLabels:
-      app: mi-app-dt  # Aplica esta política a los pods etiquetados como micro-b
+      app: mi-app-dt-helm  # Aplica esta política a los pods etiquetados como micro-b
   policyTypes:
     - Ingress
   ingress:
